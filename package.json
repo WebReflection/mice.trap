@@ -1,0 +1,26 @@
+{
+  "name": "mice.trap",
+  "version": "0.0.0",
+  "description": "A 'mouse operator' implementation",
+  "main": "cjs/index.js",
+  "module": "esm/index.js",
+  "unpkg": "index.js",
+  "scripts": {
+    "build": "npm run cjs && npm run esm && npm test",
+    "cjs": "cp index.js cjs/ && echo 'module.exports = mouse;' >> cjs/index.js",
+    "esm": "cp index.js esm/ && echo 'export default mouse;' >> esm/index.js",
+    "coveralls": "cat ./coverage/lcov.info | coveralls",
+    "test": "istanbul cover test/index.js"
+  },
+  "keywords": [
+    "mouse",
+    "operator",
+    "trap"
+  ],
+  "author": "Andrea Giammarchi",
+  "license": "ISC",
+  "devDependencies": {
+    "coveralls": "^3.0.6",
+    "istanbul": "^0.4.5"
+  }
+}
