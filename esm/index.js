@@ -8,7 +8,8 @@ var mouse = (function (resolve, trap) {
     },
     'trap',
     {get: function () {
-      return trap;
+      var value = trap;
+      return free(), value;
     }}
   );
 }(Promise.resolve()));
