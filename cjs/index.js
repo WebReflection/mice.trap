@@ -1,4 +1,8 @@
 /*! (c) Andrea Giammarchi - ISC */
+
+// a one liner functionality example
+// function mouse(trap) { return (mouse.trap = trap); }
+
 var mouse = (function (resolve, trap) {
   function free() { trap = void 0; }
   return Object.defineProperty(
